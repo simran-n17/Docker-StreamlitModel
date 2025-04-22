@@ -21,7 +21,7 @@ def main():
     st.sidebar.title("Binary Classification")
     st.sidebar.markdown("Are your mushroom edible or poisonous?")
 
-    @st.cache(persist = True)
+    @st.cache_data  # Changed from st.cache(persist=True)
     def load_data():
         data = pd.read_csv('mushrooms.csv')
         label = LabelEncoder()
@@ -31,7 +31,7 @@ def main():
         
         return data
 
-    @st.cache(persist = True)
+    @st.cache_data  # Changed from st.cache(persist=True)
     def split(df):
         y = df.type
         x = df.drop(columns = ['type'])
