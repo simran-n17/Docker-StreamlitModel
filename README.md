@@ -1,5 +1,5 @@
 
-# ML Model Using Docker
+# ML Model Using Docker - Binary Classification of Mushrooms
 
 We are going to create the ML model using the Docker and we will train the model to do so.
 
